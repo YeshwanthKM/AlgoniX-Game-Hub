@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algonix Hub - Algorithmic Game Collection</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8ff5ff",
+                        "primary-container": "#00eefc",
+                        "secondary": "#ac89ff",
+                        "tertiary": "#ff59e3",
+                        "background": "#0b0e14",
+                        "surface": "#0b0e14",
+                        "surface-container-low": "#10131a",
+                        "surface-container-high": "#1c2028",
+                        "surface-container-highest": "#22262f",
+                        "on-surface": "#ecedf6",
+                        "on-surface-variant": "#a9abb3",
+                        "outline-variant": "rgba(69, 72, 79, 0.15)",
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                    },
+                    borderRadius: {
+                        "xl": "0.5rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0b0e14;
+            color: #ecedf6;
+            font-family: 'Manrope', sans-serif;
+            overflow-x: hidden;
+        }
+        .glass-nav {
+            background: rgba(16, 19, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .hero-glow {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 600px;
+            background: radial-gradient(circle at 50% 0%, rgba(143, 245, 255, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(143, 245, 255, 0.3);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px) scale(1.01);
+            background: #1c2028;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(143, 245, 255, 0.05);
+        }
+        .card-hover:hover .launch-icon {
+            transform: translateX(4px);
+            color: #8ff5ff;
+        }
+        .card-hover:hover .game-icon {
+            background: rgba(143, 245, 255, 0.15);
+            color: #8ff5ff;
+        }
+        .grid-bg {
+            background-image: radial-gradient(rgba(143, 245, 255, 0.05) 1px, transparent 1.5px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary selection:text-background">
+    <div class="hero-glow"></div>
+    <div class="fixed inset-0 grid-bg pointer-events-none opacity-40"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed top-0 w-full z-50">
+        <div class="max-w-[1440px] mx-auto px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="text-white font-headline font-bold text-xl tracking-tight">AlgoniX <span class="text-primary">Hub</span></span>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="relative z-10 pt-40 pb-20 px-8 max-w-[1440px] mx-auto">
+        <header class="mb-24">
+            <h1 class="text-7xl md:text-8xl font-headline font-bold tracking-tighter text-white mb-6 text-glow">
+                AlgoniX Games
+            </h1>
+            <p class="text-primary font-headline font-bold text-sm tracking-[0.3em] uppercase mb-12">
+                Interactive AI Algorithmic Showcases
+            </p>
+            <div class="max-w-2xl">
+                <p class="text-on-surface-variant text-lg leading-relaxed font-light mb-12">
+                    Explore a curated collection of interactive games designed to visualize and test complex computational logic. From neural evolution to advanced pathfinding optimization.
+                </p>
+
+            </div>
+        </header>
+
+        <!-- Game Library Section -->
+        <section>
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-xs font-label font-extrabold uppercase tracking-[0.4em] text-on-surface-variant">Game Library</h2>
+                <div class="h-[1px] flex-grow bg-white/5"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5 border border-white/5">
+                <!-- Path Zero -->
+                <div class="card-hover bg-surface-container-low p-10 transition-all duration-500 flex flex-col justify-between min-h-[400px]">
+                    <div>
+                        <div class="game-icon w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center text-on-surface-variant mb-10 transition-all">
+                            <span class="material-symbols-outlined text-2xl">account_tree</span>
+                        </div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <h3 class="text-3xl font-headline font-bold text-white">Path Zero</h3>
+                            <span class="text-[10px] bg-white/5 px-2 py-0.5 rounded text-on-surface-variant font-bold tracking-widest uppercase">ALG-01</span>
+                        </div>
+                        <p class="text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-6">Shortest Path Analysis</p>
+                        <p class="text-on-surface-variant font-light leading-relaxed max-w-sm mb-8">
+                            Navigate through multi-dimensional matrices. Compete against real-time pathfinding algorithms (A*, Dijkstra) to reach target coordinates via the most efficient vector.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <a href="https://yeshwanthkm.github.io/AlgoniX-Path-Zero/" target="_blank" class="px-8 py-3 rounded-full font-headline font-bold text-[10px] tracking-widest uppercase bg-gradient-to-r from-primary to-primary-container text-background hover:shadow-[0_0_20px_rgba(143,245,255,0.3)] hover:scale-105 transition-all text-center">
+                            Launch Game
+                        </a>
+                        <a href="path-zero.html" class="launch-game-link group flex items-center gap-3 text-[10px] font-bold tracking-[0.3em] uppercase text-on-surface hover:text-primary transition-all">
+                            Game Description
+                            <span class="launch-icon material-symbols-outlined text-sm transition-transform">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Target Zero -->
+                <div class="card-hover bg-surface-container-low p-10 transition-all duration-500 flex flex-col justify-between min-h-[400px]">
+                    <div>
+                        <div class="game-icon w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center text-on-surface-variant mb-10 transition-all">
+                            <span class="material-symbols-outlined text-2xl">ads_click</span>
+                        </div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <h3 class="text-3xl font-headline font-bold text-white">Target Zero</h3>
+                            <span class="text-[10px] bg-white/5 px-2 py-0.5 rounded text-on-surface-variant font-bold tracking-widest uppercase">ALG-02</span>
+                        </div>
+                        <p class="text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-6">Reactive Combat AI</p>
+                        <p class="text-on-surface-variant font-light leading-relaxed max-w-sm mb-8">
+                            A tactical survival environment designed to benchmark combat heuristics. Face neural networks trained for adaptive positioning and priority targeting.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <a href="https://yeshwanthkm.github.io/Algonix-Target-Zero/index.html" target="_blank" class="px-8 py-3 rounded-full font-headline font-bold text-[10px] tracking-widest uppercase bg-gradient-to-r from-primary to-primary-container text-background hover:shadow-[0_0_20px_rgba(143,245,255,0.3)] hover:scale-105 transition-all text-center">
+                            Launch Game
+                        </a>
+                        <a href="target-zero.html" class="launch-game-link group flex items-center gap-3 text-[10px] font-bold tracking-[0.3em] uppercase text-on-surface hover:text-primary transition-all">
+                            Game Description
+                            <span class="launch-icon material-symbols-outlined text-sm transition-transform">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gravity Zero -->
+                <div class="card-hover bg-surface-container-low p-10 transition-all duration-500 flex flex-col justify-between min-h-[400px]">
+                    <div>
+                        <div class="game-icon w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center text-on-surface-variant mb-10 transition-all">
+                            <span class="material-symbols-outlined text-2xl">rocket_launch</span>
+                        </div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <h3 class="text-3xl font-headline font-bold text-white">Gravity Zero</h3>
+                            <span class="text-[10px] bg-white/5 px-2 py-0.5 rounded text-on-surface-variant font-bold tracking-widest uppercase">ALG-03</span>
+                        </div>
+                        <p class="text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-6">Physics Prediction Hub</p>
+                        <p class="text-on-surface-variant font-light leading-relaxed max-w-sm mb-8">
+                            Simulate complex orbital mechanics and gravity wells. Predict chaotic movement through high-precision physics engines and solve spatial puzzles.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <a href="https://yeshwanthkm.github.io/AlgoniX-Gravity-Zero/" target="_blank" class="px-8 py-3 rounded-full font-headline font-bold text-[10px] tracking-widest uppercase bg-gradient-to-r from-primary to-primary-container text-background hover:shadow-[0_0_20px_rgba(143,245,255,0.3)] hover:scale-105 transition-all text-center">
+                            Launch Game
+                        </a>
+                        <a href="gravity-zero.html" class="launch-game-link group flex items-center gap-3 text-[10px] font-bold tracking-[0.3em] uppercase text-on-surface hover:text-primary transition-all">
+                            Game Description
+                            <span class="launch-icon material-symbols-outlined text-sm transition-transform">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Traffic Zero -->
+                <div class="card-hover bg-surface-container-low p-10 transition-all duration-500 flex flex-col justify-between min-h-[400px]">
+                    <div>
+                        <div class="game-icon w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center text-on-surface-variant mb-10 transition-all">
+                            <span class="material-symbols-outlined text-2xl">traffic</span>
+                        </div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <h3 class="text-3xl font-headline font-bold text-white">Traffic Zero</h3>
+                            <span class="text-[10px] bg-white/5 px-2 py-0.5 rounded text-on-surface-variant font-bold tracking-widest uppercase">ALG-04</span>
+                        </div>
+                        <p class="text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-6">System Load Balancing</p>
+                        <p class="text-on-surface-variant font-light leading-relaxed max-w-sm mb-8">
+                            Optimize data flow and network routing in complex urban topologies. Minimize latency and avoid bottlenecks in a high-concurrency environment.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <a href="https://yeshwanthkm.github.io/AlgoniX-Traffic-Zero/" target="_blank" class="px-8 py-3 rounded-full font-headline font-bold text-[10px] tracking-widest uppercase bg-gradient-to-r from-primary to-primary-container text-background hover:shadow-[0_0_20px_rgba(143,245,255,0.3)] hover:scale-105 transition-all text-center">
+                            Launch Game
+                        </a>
+                        <a href="traffic-zero.html" class="launch-game-link group flex items-center gap-3 text-[10px] font-bold tracking-[0.3em] uppercase text-on-surface hover:text-primary transition-all">
+                            Game Description
+                            <span class="launch-icon material-symbols-outlined text-sm transition-transform">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-40 border-t border-white/5 py-12 px-8">
+        <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="flex items-center gap-8">
+                <span class="text-white font-headline font-bold text-lg tracking-tight">AlgoniX</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

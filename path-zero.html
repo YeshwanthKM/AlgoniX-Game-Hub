@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Path Zero - Detailed View</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#003f43",
+                        "surface-dim": "#0b0e14",
+                        "on-tertiary": "#42003a",
+                        "on-tertiary-fixed": "#33002d",
+                        "primary-container": "#00eefc",
+                        "on-surface": "#ecedf6",
+                        "secondary": "#ac89ff",
+                        "primary-fixed-dim": "#00deec",
+                        "tertiary-fixed-dim": "#ff68e3",
+                        "on-primary-container": "#005359",
+                        "on-secondary-fixed": "#41009a",
+                        "primary-fixed": "#00eefc",
+                        "surface-container": "#161a21",
+                        "on-secondary-container": "#f8f1ff",
+                        "background": "#0b0e14",
+                        "tertiary-dim": "#ff59e3",
+                        "on-primary": "#005d63",
+                        "error-container": "#9f0519",
+                        "on-secondary": "#290067",
+                        "secondary-dim": "#874cff",
+                        "error-dim": "#d7383b",
+                        "inverse-primary": "#006a71",
+                        "error": "#ff716c",
+                        "tertiary-fixed": "#ff85e4",
+                        "surface-container-high": "#1c2028",
+                        "surface-variant": "#22262f",
+                        "outline": "#73757d",
+                        "on-tertiary-container": "#1b0017",
+                        "primary": "#8ff5ff",
+                        "tertiary-container": "#ff05e5",
+                        "inverse-surface": "#f9f9ff",
+                        "surface-container-low": "#10131a",
+                        "tertiary": "#ff59e3",
+                        "outline-variant": "#45484f",
+                        "secondary-container": "#7000ff",
+                        "surface-container-lowest": "#000000",
+                        "on-secondary-fixed-variant": "#6300e2",
+                        "on-error-container": "#ffa8a3",
+                        "on-tertiary-fixed-variant": "#6d0061",
+                        "on-primary-fixed-variant": "#005e64",
+                        "surface-bright": "#282c36",
+                        "secondary-fixed": "#dac9ff",
+                        "surface-tint": "#8ff5ff",
+                        "surface": "#0b0e14",
+                        "secondary-fixed-dim": "#ceb9ff",
+                        "on-error": "#490006",
+                        "on-background": "#ecedf6",
+                        "on-surface-variant": "#a9abb3",
+                        "inverse-on-surface": "#52555c",
+                        "primary-dim": "#00deec",
+                        "surface-container-highest": "#22262f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(11, 14, 20, 0.8);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(143, 245, 255, 0.4);
+        }
+        .pulse-primary {
+            box-shadow: 0 0 30px rgba(143, 245, 255, 0.15);
+        }
+        .neon-accent-left {
+            border-left: 2px solid rgba(143, 245, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary-fixed overflow-x-hidden">
+<!-- Background Decoration -->
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[-5%] right-[-5%] w-[30%] h-[30%] bg-secondary/5 blur-[100px] rounded-full"></div>
+<div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(#8ff5ff 0.5px, transparent 0.5px); background-size: 30px 30px;"></div>
+</div>
+<!-- Main Content Container -->
+<main class="relative z-10 w-full min-h-screen flex items-center justify-center p-4 md:p-8">
+<div class="glass-panel w-full max-w-5xl rounded-3xl border border-white/10 flex flex-col overflow-hidden shadow-2xl relative">
+<!-- Close Button -->
+<!-- Close Button (Back to Hub) -->
+<a href="index.html" class="absolute top-6 right-6 z-50 p-2 text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 rounded-full group">
+<span class="material-symbols-outlined text-2xl">close</span>
+</a>
+<!-- Simplified Structured Layout -->
+<div class="flex flex-col h-full">
+<!-- Header Section: Centered & Focused -->
+<header class="p-8 md:p-12 text-center border-b border-white/5 bg-surface-container-low/30">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
+<span class="material-symbols-outlined text-[14px] text-primary">terminal</span>
+<span class="text-[10px] font-label font-bold tracking-widest text-primary uppercase">Project Identifier: Path Zero</span>
+</div>
+<h1 class="text-5xl md:text-6xl lg:text-7xl font-headline font-bold tracking-tighter text-white mb-4 text-glow">
+                        Path Zero
+                    </h1>
+<p class="text-lg md:text-xl text-primary/80 font-body font-light italic max-w-2xl mx-auto">
+                        Race against the perfect path — can you match the algorithm?
+                    </p>
+</header>
+<!-- Grid Content Area -->
+<div class="p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+<!-- Left Column: Mission & Sequence -->
+<div class="space-y-12">
+<section class="neon-accent-left pl-6">
+<h3 class="text-xs font-label font-extrabold uppercase tracking-widest text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">target</span>
+                                Mission Objective
+                            </h3>
+<p class="text-on-surface text-lg leading-relaxed font-light">
+                                Navigate through a complex maze and reach the exit using the <span class="text-primary font-semibold">shortest path possible</span> while competing against a real-time AI adversary.
+                            </p>
+</section>
+<section class="pl-6">
+<h3 class="text-xs font-label font-extrabold uppercase tracking-widest text-on-surface-variant mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">account_tree</span>
+                                Operation Sequence
+                            </h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4 group">
+<span class="text-primary/40 font-headline font-bold text-xl group-hover:text-primary transition-colors">01</span>
+<div>
+<p class="text-on-surface font-medium text-sm">Difficulty Calibration</p>
+<p class="text-xs text-on-surface-variant mt-1">Player selects maze complexity and AI speed parameters.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 group">
+<span class="text-primary/40 font-headline font-bold text-xl group-hover:text-primary transition-colors">02</span>
+<div>
+<p class="text-on-surface font-medium text-sm">Neural Grid Generation</p>
+<p class="text-xs text-on-surface-variant mt-1">Maze structures are procedurally synthesized via DFS.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 group">
+<span class="text-primary/40 font-headline font-bold text-xl group-hover:text-primary transition-colors">03</span>
+<div>
+<p class="text-on-surface font-medium text-sm">Zero-Hour Execution</p>
+<p class="text-xs text-on-surface-variant mt-1">Player and AI race; Final efficiency metrics compared.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Tech & AI Architecture -->
+<div class="space-y-12">
+<section class="neon-accent-left pl-6">
+<h3 class="text-xs font-label font-extrabold uppercase tracking-widest text-secondary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">settings_input_component</span>
+                                Core Algorithms
+                            </h3>
+<div class="grid grid-cols-1 gap-4"><!-- DFS Card -->
+<div class="p-4 rounded-xl bg-white/5 border border-white/5 flex items-center gap-4 hover:bg-white/10 transition-all group">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 shrink-0">
+<span class="material-symbols-outlined text-primary text-xl">hub</span>
+</div>
+<div>
+<p class="text-white font-bold text-sm tracking-tight">Depth First Search (DFS)</p>
+<p class="text-xs text-on-surface-variant font-light mt-0.5">Used to generate the maze by exploring paths deeply and creating a unique structure each time.</p>
+</div>
+</div>
+<!-- BFS Card -->
+<div class="p-4 rounded-xl bg-white/5 border border-white/5 flex items-center gap-4 hover:bg-white/10 transition-all group">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center border border-secondary/20 shrink-0">
+<span class="material-symbols-outlined text-secondary text-xl">route</span>
+</div>
+<div>
+<p class="text-white font-bold text-sm tracking-tight">Breadth First Search (BFS)</p>
+<p class="text-xs text-on-surface-variant font-light mt-0.5">Finds the shortest path from start to exit by exploring all possible paths level by level.</p>
+</div>
+</div>
+<!-- A* Card -->
+<div class="p-4 rounded-xl bg-white/5 border border-white/5 flex items-center gap-4 hover:bg-white/10 transition-all group">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 shrink-0">
+<span class="material-symbols-outlined text-primary text-xl">analytics</span>
+</div>
+<div>
+<p class="text-white font-bold text-sm tracking-tight">A* (A-Star) Algorithm</p>
+<p class="text-xs text-on-surface-variant font-light mt-0.5">An optimized pathfinding algorithm that uses distance-based logic to reach the goal faster and more efficiently than basic search methods.</p>
+</div>
+</div></div>
+</section>
+<section class="pl-6">
+<h3 class="text-xs font-label font-extrabold uppercase tracking-widest text-on-surface-variant mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">psychology</span>
+                                AI Architecture
+                            </h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3 text-sm text-on-surface-variant group">
+<span class="material-symbols-outlined text-secondary text-lg group-hover:text-primary transition-colors">check_circle</span>
+<span>Calculates optimal path instantly upon generation.</span>
+</li>
+<li class="flex items-start gap-3 text-sm text-on-surface-variant group">
+<span class="material-symbols-outlined text-secondary text-lg group-hover:text-primary transition-colors">check_circle</span>
+<span>Moves step-by-step visibly to allow visual study.</span>
+</li>
+<li class="flex items-start gap-3 text-sm text-on-surface-variant group">
+<span class="material-symbols-outlined text-secondary text-lg group-hover:text-primary transition-colors">check_circle</span>
+<span>Guaranteed 100% path efficiency at all difficulty tiers.</span>
+</li>
+</ul>
+</section>
+</div>
+</div>
+<!-- Footer: Centered Summary & CTA -->
+<footer class="mt-auto p-8 md:px-12 md:pb-12 border-t border-white/5 bg-surface-container-lowest/30">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+<div class="max-w-xl text-center lg:text-left">
+<h4 class="text-primary font-headline font-bold text-lg mb-2 uppercase tracking-tighter">The Innovation</h4>
+<p class="text-on-surface-variant text-sm font-light leading-relaxed">
+                                Unlike traditional racing games, Path Zero shifts the focus from <span class="text-on-surface font-medium italic">mechanical speed</span> to <span class="text-on-surface font-medium italic">logical efficiency</span>. It provides a visceral comparison between human heuristic navigation and mathematical perfection.
+                            </p>
+</div>
+<div class="flex items-center gap-4 shrink-0">
+<a href="https://yeshwanthkm.github.io/AlgoniX-Path-Zero/" target="_blank" class="px-10 py-3.5 rounded-full font-label font-bold text-xs tracking-widest uppercase bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed pulse-primary hover:scale-105 active:scale-95 transition-all inline-block">Launch Game</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<!-- Pagination Decor -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4">
+<div class="w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(143,245,255,1)]"></div>
+<div class="w-2 h-2 rounded-full bg-white/10"></div>
+<div class="w-2 h-2 rounded-full bg-white/10"></div>
+</div>
+</main>
+</body></html>
